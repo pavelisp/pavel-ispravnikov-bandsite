@@ -1,0 +1,49 @@
+/* Importing fonts */
+
+@mixin font($name, $path, $weight) {
+  @font-face {
+    font-family: $name;
+    src: url($path + ".otf") format("opentype"),
+      url($path + ".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Regular", 400);
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Demi", 600);
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Bold", 700);
+
+// Mixin for base typography
+
+@mixin font-info($size, $weight, $height) {
+  font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+/* Base typography styles */
+
+body {
+  @include font-info(14px, 400, 22px);
+}
+
+h1 {
+  @include font-info(60px, 700, 68px);
+}
+
+h2 {
+  @include font-info(35px, 700, 44px);
+}
+
+h3 {
+  @include font-info(24px, 600, 32px);
+}
+
+p {
+  @include font-info(14px, 400, 22px);
+}

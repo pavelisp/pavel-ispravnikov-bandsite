@@ -1,0 +1,12 @@
+@use "partials/colors" as *;
+@use "partials/typography" as *;
+@use "partials/media-queries" as *;
+
+body {
+  @include tablet {
+    background: red;
+  }
+  @include desktop {
+    background: orange;
+  }
+}
