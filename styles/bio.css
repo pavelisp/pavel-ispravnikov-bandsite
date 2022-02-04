@@ -167,7 +167,6 @@ h3 {
     margin: 0 auto;
   }
 }
-
 .footer__header {
   display: inline-flex;
   flex-direction: column;
@@ -180,7 +179,6 @@ h3 {
     align-items: baseline;
   }
 }
-
 .footer__title {
   font-weight: 600;
   font-size: 1.8rem;
@@ -191,82 +189,70 @@ h3 {
     width: calc(33.33% - 1.5rem);
   }
 }
-
-.footer__social-list {
+.footer__title__social-list {
   display: flex;
   align-items: baseline;
 }
-
-.footer__social-link {
+.footer__title__social-link {
   display: block;
 }
-
-.footer__social-item {
+.footer__title__social-item {
   margin-right: 2rem;
 }
-
-.footer__social-icon {
+.footer__title__social-icon {
   display: block;
   height: 1.8rem;
   width: 1.8rem;
 }
-
-.footer__logo--large {
+.footer__title__logo--large {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .footer__logo--large {
+  .footer__title__logo--large {
     display: inline-block;
     margin-left: auto;
   }
 }
-
-.footer__logo--small {
+.footer__title__logo--small {
   height: 1.5rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__logo--small {
+  .footer__title__logo--small {
     display: none;
   }
 }
-
-.footer__info {
+.footer__title__info {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__info {
+  .footer__title__info {
     flex-direction: row;
     justify-content: flex-start;
   }
 }
-
-.footer__info-item {
+.footer__title__info-item {
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__info-item {
+  .footer__title__info-item {
     margin-right: 1.5rem;
     width: calc(33.33% - 1.5rem);
   }
 }
-
-.footer__info-text {
+.footer__title__info-text {
   margin-bottom: 0.25rem;
 }
-
-.footer__info-text--bold {
+.footer__title__info-text--bold {
   font-weight: 600;
 }
-
-.footer__info-text--bold:last-of-type {
+.footer__title__info-text--bold:last-of-type {
   margin-bottom: 1.5rem;
 }
-
-.footer__info-email {
+.footer__title__info-email {
   text-decoration: none;
   color: inherit;
   display: inline-block;
