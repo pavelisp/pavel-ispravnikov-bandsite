@@ -1,5 +1,8 @@
-/* Importing fonts */
+@use "sass:math" as m;
+@use "variables" as *;
+@use "mixins" as *;
 
+/* Importing fonts */
 @mixin font($name, $path, $weight) {
   @font-face {
     font-family: $name;
@@ -19,31 +22,42 @@
 
 // Mixin for base typography
 
-@mixin font-info($size, $weight, $height) {
+@mixin font-info($size, $height, $weight) {
   font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
   font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
+  font-size: $size + rem;
+  line-height: $height + rem;
 }
+
+// Provided typography font-sizes
 
 /* Base typography styles */
 
 body {
-  @include font-info(14px, 400, 22px);
+  letter-spacing: 0.5px;
+  @include font-info(m.div(13, 16), m.div(18, 16), 400);
 }
 
 h1 {
-  @include font-info(60px, 700, 68px);
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(24, 16), m.div(32, 16), 700);
+  @include tablet {
+    @include font-info(m.div(60, 16), m.div(68, 16), 700);
+  }
 }
 
 h2 {
-  @include font-info(35px, 700, 44px);
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(24, 16), m.div(32, 16), 700);
+  @include tablet {
+    @include font-info(m.div(36, 16), m.div(44, 16), 700);
+  }
 }
 
 h3 {
-  @include font-info(24px, 600, 32px);
-}
-
-p {
-  @include font-info(14px, 400, 22px);
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(14, 16), m.div(22, 16), 600);
 }

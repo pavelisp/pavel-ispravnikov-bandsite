@@ -1,4 +1,7 @@
-@use "variables" as *;
+$tablet: 768px;
+$desktop: 1280px;
+
+// Media Quieries
 
 @mixin tablet {
   @media screen and (min-width: $tablet) {
