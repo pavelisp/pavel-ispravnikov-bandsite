@@ -59,6 +59,7 @@
     color: $mercury;
     padding: $space-16 0;
     margin: 0;
+    border-bottom: 4px solid transparent;
     @include tablet {
       padding: 2.25rem 0;
     }
@@ -134,6 +135,9 @@
     @include tablet {
       display: inline-block;
       margin-left: auto;
+    }
+    img {
+      height: $space-24;
     }
   }
 

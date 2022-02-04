@@ -9,25 +9,23 @@
 
 .hero {
   height: m.div(216, 16) + rem;
-  background-image: url(../assets/images/hero-bio.jpg);
+  background-image: linear-gradient(
+      rgba($bandsite-black, 0.5),
+      rgba($bandsite-black, 0.5)
+    ),
+    url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-16;
+
   @include tablet {
+    padding: 0 $space-36;
     height: m.div(500, 16) + rem;
   }
   @include desktop {
     height: m.div(715, 16) + rem;
-  }
-  .hero-background {
-    background-color: rgba($bandsite-black, 0.5);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 $space-16;
-    @include tablet {
-      padding: 0 $space-36;
-    }
   }
 
   &__band-name {
