@@ -16,20 +16,25 @@
 </head>
 
 <body>
-
-  <header class="header">
-    <img class="header__logo" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE Logo">
-    <nav class="header__nav">
-      <ul class="header__navlist">
-        <li class="header__nav-item"><a href="Biography" class="header__nav-link">Biography</a></li>
-        <li class="header__nav-item"><a href="Biography" class="header__nav-link">Shows</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="header-background">
+    <header class="header">
+      <img class="header__logo" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE Logo">
+      <nav>
+        <ul class="header__nav">
+          <li class="header__nav-item"><a href="./index.html"
+              class="header__nav-link header__nav-link--active">Biography</a>
+          </li>
+          <li class="header__nav-item"><a href="./pages/shows.html" class="header__nav-link">Shows</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   <section class="hero">
-    <h1 class="hero__band-name">
-      The Bees Knees
-    </h1>
+    <div class="hero-background">
+      <h1 class="hero__band-name">
+        The Bees Knees
+      </h1>
+    </div>
   </section>
   <main class="main-container">
     <section class="about">
@@ -57,82 +62,76 @@
           released in late 2021.</p>
       </section>
     </section>
-    <section class="gallery">
-      <h2 class="gallery__title">Photo Gallery</h2>
-      <section class="gallery__photos">
-        <img src="./assets/images/gallery/Photo-gallery-1.jpg" alt="Photo of crowd at concert" class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-2.jpg" alt="Woman rising above crowd at concert"
-          class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-3.jpg" alt="Woman above crowd pointing at the stage"
-          class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-4.jpg" alt="Hands lifted above heads at concert"
-          class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-5.jpg" alt="Crowd in awe pointing at string confetti"
-          class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-6.jpg"
-          alt="Singer on stage raises 4 fingers in the air while singing" class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-7.jpg"
-          alt="Wide view of a concert with amazing neon lights and confetti" class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-8.jpg" alt="Close up photo of a DJ turning a digital turntable"
-          class="gallery__photo">
-        <img src="./assets/images/gallery/Photo-gallery-9.jpg" alt="Cropped photo of confetti falling on a crowd"
-          class="gallery__photo">
+    <div class="gallery-background">
+      <section class="gallery">
+        <h2 class="gallery__title">Photo Gallery</h2>
+        <section class="gallery__photos">
+          <img src="./assets/images/gallery/Photo-gallery-1.jpg" alt="Photo of crowd at concert" class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-2.jpg" alt="Woman rising above crowd at concert"
+            class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-3.jpg" alt="Woman above crowd pointing at the stage"
+            class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-4.jpg" alt="Hands lifted above heads at concert"
+            class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-5.jpg" alt="Crowd in awe pointing at string confetti"
+            class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-6.jpg"
+            alt="Singer on stage raises 4 fingers in the air while singing" class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-7.jpg"
+            alt="Wide view of a concert with amazing neon lights and confetti" class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-8.jpg"
+            alt="Close up photo of a DJ turning a digital turntable" class="gallery__photo">
+          <img src="./assets/images/gallery/Photo-gallery-9.jpg" alt="Cropped photo of confetti falling on a crowd"
+            class="gallery__photo">
+        </section>
       </section>
-    </section>
+    </div>
+
   </main>
-  <footer class="footer">
-    <div class="footer__header">
-      <h2 class="footer__title">Get in Touch</h2>
-      <ul class="footer__social-list">
-        <li class="footer__social-item"><a href="#" class="footer__social-link"><img
-              src="./assets/icons/Icon-instagram.svg" alt="Instagram icon" class="footer__social-icon"></a></li>
-        <li class="footer__social-item"><a href="#" class="footer__social-link"><img
-              src="./assets/icons/Icon-facebook.svg" alt="Facebook icon" class="footer__social-icon"></a></li>
-        <li class="footer__social-item"><a href="#" class="footer__social-link"><img
-              src="./assets/icons/Icon-twitter.svg" alt="Twitter icon" class="footer__social-icon"></a></li>
-      </ul>
-    </div>
-    <div class="footer__info">
-      <div class="footer__info-item">
-        <span class="footer__info-title">
-          <h3 class="footer__info-person">Cam Adams</h3>
-          <p>The Bees Knees Management</p>
-          <img src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" class="footer__logo--large">
-        </span>
-        <span class="footer__info-text">
-          <p>503 Broadway Penthouse,</p>
-          <p>New York, NY 10012, USA</p>
-        </span>
-        <p><a href="mailto:info@thebeesknees.com" class="footer__info-email">info@thebeesknees.com</a></p>
+  <div class="footer-background">
+    <footer class="footer">
+      <div class="footer__header">
+        <h2 class="footer__title">Get in Touch</h2>
+        <ul class="footer__social-list">
+          <li class="footer__social-item"><a href="#" class="footer__social-link"><img
+                src="./assets/icons/Icon-instagram.svg" alt="Instagram icon" class="footer__social-icon"></a></li>
+          <li class="footer__social-item"><a href="#" class="footer__social-link"><img
+                src="./assets/icons/Icon-facebook.svg" alt="Facebook icon" class="footer__social-icon"></a></li>
+          <li class="footer__social-item"><a href="#" class="footer__social-link"><img
+                src="./assets/icons/Icon-twitter.svg" alt="Twitter icon" class="footer__social-icon"></a></li>
+        </ul>
+        <img src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" class="footer__logo--large">
       </div>
-      <div class="footer__info-item">
-        <span class="footer__info-title">
-          <h3 class="footer__info-person">Pearl Gregg</h3>
-          <p>Limitless Artist Group</p>
-        </span>
-        <span class="footer__info-text">
-          <p>Booking Agent for</p>
-          <p>US / South America / Japan</p>
-        </span>
-        <p><a href="mailto:pearl.gregg@limitlessag.com" class="footer__info-email">pearl.gregg@limitlessag.com</a></p>
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Cam Adams</h4>
+          <h4 class="footer__info-text footer__info-text--bold">The Bees Knees Management</h4>
+          <p class="footer__info-text">503 Broadway Penthouse,</p>
+          <p class="footer__info-text">New York, NY 10012, USA</p>
+          <a href="mailto:info@thebeesknees.com" class="footer__info-email">info@thebeesknees.com</a>
+        </div>
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Pearl Gregg</h4>
+          <h4 class="footer__info-text footer__info-text--bold">Limitless Artist Group</h4>
+          <p class="footer__info-text">Booking Agent for</p>
+          <p class="footer__info-text">US / South America / Japan</p>
+          <a href="mailto:pearl.gregg@limitlessag.com" class="footer__info-email">pearl.gregg@limitlessag.com</a>
+        </div>
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Carson Whyte</h4>
+          <h4 class="footer__info-text footer__info-text--bold">ARCH Entertainment</h4>
+          <p class="footer__info-text">Booking Agent for</p>
+          <p class="footer__info-text">UK / EU / AU</p>
+          <a href="mailto:cwhyte@archentertainment.com" class="footer__info-email">cwhyte@archentertainment.com</a>
+        </div>
       </div>
-      <div class="footer__info-item">
-        <span class="footer__info-title">
-          <h3 class="footer__info-person">Carson Whyte</h3>
-          <p>ARCH Entertainment</p>
-        </span>
-        <span class="footer__info-text">
-          <p>Booking Agent for</p>
-          <p>UK / EU / AU</p>
-        </span>
-        <p><a href="mailto:cwhyte@archentertainment.com" class="footer__info-email">cwhyte@archentertainment.com</a></p>
+      <div class="footer__copyright">
+        <img src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" class="footer__logo--small">
+        <p class="footer__copyright-text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
       </div>
-    </div>
-    <div class="footer__copyright">
-      <img src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" class="footer__logo--small">
-      <p class="footer__copyright-text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
 
 </body>
 
