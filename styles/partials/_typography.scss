@@ -44,6 +44,8 @@ h1 {
   @include font-info(m.div(24, 16), m.div(32, 16), 700);
   @include tablet {
     @include font-info(m.div(60, 16), m.div(68, 16), 700);
+    margin-top: $space-48;
+    margin-bottom: $space-36;
   }
 }
 
@@ -53,6 +55,8 @@ h2 {
   @include font-info(m.div(24, 16), m.div(32, 16), 700);
   @include tablet {
     @include font-info(m.div(36, 16), m.div(44, 16), 700);
+    margin-top: $space-48;
+    margin-bottom: $space-36;
   }
 }
 
@@ -60,4 +64,6 @@ h3 {
   margin-top: $space-24;
   margin-bottom: $space-16;
   @include font-info(m.div(14, 16), m.div(22, 16), 600);
+  margin-top: $space-48;
+  margin-bottom: $space-36;
 }
