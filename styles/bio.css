@@ -20,7 +20,7 @@
   font-style: normal;
   font-display: swap;
 }
-/* Base typography styles */
+/* Base & Responsive typography styles */
 body {
   letter-spacing: 0.5px;
   font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -338,27 +338,6 @@ h3 {
     margin: 0 auto;
   }
 }
-
-.quote {
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-@media screen and (min-width: 768px) {
-  .quote {
-    margin: 0 5rem 4rem;
-    font-size: 1.5rem;
-  }
-}
-.quote__text {
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.quote__caption {
-  margin-top: 0.5rem;
-}
-
 .about__name {
   font-size: 1.125rem;
 }
@@ -386,6 +365,27 @@ h3 {
   }
 }
 
+.quote {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .quote {
+    margin: 0 5rem 4rem;
+    font-size: 1.5rem;
+  }
+}
+.quote__text {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.quote__caption {
+  margin-top: 0.5rem;
+}
+
+/* Gallery section */
 .gallery-background {
   background-color: #fafafa;
   padding: 1.5rem 1rem;

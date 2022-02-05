@@ -3,6 +3,7 @@
 @use "mixins" as *;
 
 /* Importing fonts */
+
 @mixin font($name, $path, $weight) {
   @font-face {
     font-family: $name;
@@ -31,7 +32,7 @@
 
 // Provided typography font-sizes
 
-/* Base typography styles */
+/* Base & Responsive typography styles */
 
 body {
   letter-spacing: 0.5px;

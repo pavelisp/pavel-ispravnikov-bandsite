@@ -65,27 +65,7 @@
     width: 1020px;
     margin: 0 auto;
   }
-}
 
-.quote {
-  font-size: m.div(18, 16) + rem;
-  font-weight: 600;
-  line-height: 1.5;
-  @include tablet {
-    margin: 0 $space-80 $space-64;
-    font-size: m.div(24, 16) + rem;
-  }
-  &__text {
-    font-weight: inherit;
-    font-size: inherit;
-    line-height: inherit;
-  }
-  &__caption {
-    margin-top: $space-8;
-  }
-}
-
-.about {
   &__name {
     font-size: m.div(18, 16) + rem;
     @include tablet {
@@ -109,6 +89,26 @@
     }
   }
 }
+
+.quote {
+  font-size: m.div(18, 16) + rem;
+  font-weight: 600;
+  line-height: 1.5;
+  @include tablet {
+    margin: 0 $space-80 $space-64;
+    font-size: m.div(24, 16) + rem;
+  }
+  &__text {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  &__caption {
+    margin-top: $space-8;
+  }
+}
+
+/* Gallery section */
 
 .gallery-background {
   background-color: $alabaster;
