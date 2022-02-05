@@ -1,0 +1,160 @@
+@use "sass:math" as m;
+@use "partials/colors" as *;
+@use "partials/variables" as *;
+@use "partials/typography" as *;
+@use "partials/mixins" as *;
+@use "partials/global" as *;
+
+/* Hero */
+
+.hero {
+  height: m.div(216, 16) + rem;
+  background-image: linear-gradient(
+      rgba($bandsite-black, 0.5),
+      rgba($bandsite-black, 0.5)
+    ),
+    url(../assets/images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-16;
+
+  @include tablet {
+    padding: 0 $space-36;
+    height: m.div(500, 16) + rem;
+  }
+  @include desktop {
+    height: m.div(715, 16) + rem;
+  }
+
+  &__band-name {
+    width: 100%;
+
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 1.5;
+    margin: 0;
+    @include desktop {
+      width: 1020px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* About section */
+
+.about {
+  margin: 1rem;
+  &__title {
+    margin: $space-24 0 $space-16;
+    @include tablet {
+      padding: $space-36 $space-24 $space-16;
+    }
+  }
+  &__photo {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $space-16;
+    @include tablet {
+      width: calc(100% - 5rem * 2);
+      margin: 0 $space-80 $space-32;
+    }
+  }
+  @include desktop {
+    width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__name {
+    font-size: m.div(18, 16) + rem;
+    @include tablet {
+      margin: 0 $space-80 $space-24;
+      font-size: m.div(24, 16) + rem;
+    }
+  }
+  &__bio {
+    @include tablet {
+      display: flex;
+      margin: 0 $space-80 $space-32;
+    }
+  }
+  &__bio p {
+    font-size: m.div(16, 16) + rem;
+    line-height: 1.8;
+    margin-bottom: $space-16;
+    @include tablet {
+      font-size: m.div(16, 16) + rem;
+      padding-right: $space-24;
+    }
+  }
+}
+
+.quote {
+  font-size: m.div(18, 16) + rem;
+  font-weight: 600;
+  line-height: 1.5;
+  @include tablet {
+    margin: 0 $space-80 $space-64;
+    font-size: m.div(24, 16) + rem;
+  }
+  &__text {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  &__caption {
+    margin-top: $space-8;
+  }
+}
+
+/* Gallery section */
+
+.gallery-background {
+  background-color: $alabaster;
+  padding: $space-24 $space-16;
+  @include tablet {
+    padding: $space-32 0;
+  }
+}
+
+.gallery {
+  &__title {
+    margin: $space-24 $space-36 $space-24;
+    @include desktop {
+      margin: $space-24 0;
+    }
+  }
+  &__photos {
+    display: flex;
+    flex-wrap: wrap;
+    @include tablet {
+      margin: 0 $space-24;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin: 0;
+    }
+  }
+  &__photo {
+    filter: grayscale(1);
+    margin-bottom: $space-16;
+    width: 100%;
+    transition: filter 0.3s ease-in-out;
+    @include tablet {
+      display: inline-block;
+      margin: $space-16;
+      width: calc(100% / 3 - 1rem * 2);
+    }
+    @include desktop {
+      margin: $space-24 0;
+    }
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+  @include desktop {
+    width: 1020px;
+    margin: 0 auto;
+  }
+}

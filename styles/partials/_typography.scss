@@ -1,0 +1,70 @@
+@use "sass:math" as m;
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Importing fonts */
+
+@mixin font($name, $path, $weight) {
+  @font-face {
+    font-family: $name;
+    src: url($path + ".otf") format("opentype"),
+      url($path + ".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Regular", 400);
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Demi", 600);
+
+@include font("Avenir Next", "../assets/fonts/AvenirNextLTPro-Bold", 700);
+
+// Mixin for base typography
+
+@mixin font-info($size, $height, $weight) {
+  font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: $weight;
+  font-size: $size + rem;
+  line-height: $height + rem;
+}
+
+// Provided typography font-sizes
+
+/* Base & Responsive typography styles */
+
+body {
+  letter-spacing: 0.5px;
+  @include font-info(m.div(13, 16), m.div(18, 16), 400);
+}
+
+h1 {
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(24, 16), m.div(32, 16), 700);
+  @include tablet {
+    @include font-info(m.div(60, 16), m.div(68, 16), 700);
+    margin-top: $space-48;
+    margin-bottom: $space-36;
+  }
+}
+
+h2 {
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(24, 16), m.div(32, 16), 700);
+  @include tablet {
+    @include font-info(m.div(36, 16), m.div(44, 16), 700);
+    margin-top: $space-48;
+    margin-bottom: $space-36;
+  }
+}
+
+h3 {
+  margin-top: $space-24;
+  margin-bottom: $space-16;
+  @include font-info(m.div(14, 16), m.div(22, 16), 600);
+  margin-top: $space-48;
+  margin-bottom: $space-36;
+}

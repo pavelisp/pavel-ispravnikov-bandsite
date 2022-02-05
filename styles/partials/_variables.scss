@@ -1,0 +1,15 @@
+@use "sass:math" as m;
+
+// spacing increments
+
+$space-4: m.div(4, 16) + rem;
+$space-8: m.div(8, 16) + rem;
+$space-16: m.div(16, 16) + rem;
+$space-24: m.div(24, 16) + rem;
+$space-32: m.div(32, 16) + rem;
+$space-36: m.div(36, 16) + rem;
+$space-40: m.div(40, 16) + rem;
+$space-48: m.div(48, 16) + rem;
+$space-56: m.div(56, 16) + rem;
+$space-64: m.div(64, 16) + rem;
+$space-80: m.div(80, 16) + rem;
