@@ -137,8 +137,10 @@
     }
   }
   &__photo {
+    filter: grayscale(1);
     margin-bottom: $space-16;
     width: 100%;
+    transition: filter 0.3s ease-in-out;
     @include tablet {
       display: inline-block;
       margin: $space-16;
@@ -146,6 +148,9 @@
     }
     @include desktop {
       margin: $space-24 0;
+    }
+    &:hover {
+      filter: grayscale(0);
     }
   }
   @include desktop {

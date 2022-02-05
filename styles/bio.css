@@ -420,8 +420,10 @@ h3 {
   }
 }
 .gallery__photo {
+  filter: grayscale(1);
   margin-bottom: 1rem;
   width: 100%;
+  transition: filter 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .gallery__photo {
@@ -434,6 +436,9 @@ h3 {
   .gallery__photo {
     margin: 1.5rem 0;
   }
+}
+.gallery__photo:hover {
+  filter: grayscale(0);
 }
 @media screen and (min-width: 1280px) {
   .gallery {
