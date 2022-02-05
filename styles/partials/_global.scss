@@ -1,0 +1,190 @@
+@use "sass:math" as m;
+@use "colors" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Header */
+
+.header-background {
+  background-color: $bandsite-black;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  nav {
+    display: block;
+    width: 100%;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  &__logo {
+    margin: $space-16 0;
+    width: 7.5rem;
+    @include tablet {
+      margin: $space-36;
+    }
+  }
+
+  &__nav {
+    display: block;
+    width: 100%;
+    @include tablet {
+      width: 100%;
+    }
+    min-width: 100%;
+    display: flex;
+  }
+  &__nav-item {
+    flex-grow: 1;
+    text-align: center;
+    @include tablet {
+      flex-grow: 0;
+      margin: 0 $space-16;
+    }
+  }
+  &__nav-link {
+    display: block;
+    font-size: m.div(14, 16) + rem;
+    line-height: m.div(22, 16) + rem;
+    text-decoration: none;
+    color: $mercury;
+    padding: $space-16 0;
+    margin: 0;
+    border-bottom: 4px solid transparent;
+    @include tablet {
+      padding: 2.25rem 0;
+    }
+    &:hover {
+      color: $white;
+      border-bottom: 4px solid $white;
+    }
+    &--active {
+      font-weight: 600;
+      color: $white;
+      border-bottom: 4px solid $white;
+    }
+  }
+}
+
+/* Footer */
+
+.footer-background {
+  background-color: $bandsite-black;
+  padding: $space-16;
+  color: $white;
+  letter-spacing: 1px;
+  @include tablet {
+    padding: $space-36;
+  }
+}
+
+.footer {
+  @include desktop {
+    width: 1020px;
+    margin: 0 auto;
+  }
+  &__header {
+    display: inline-flex;
+    flex-direction: column;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-right: $space-24;
+    @include tablet {
+      width: calc(33.33% - 1.5rem);
+    }
+  }
+  &__social-list {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__social-link {
+    display: block;
+  }
+
+  &__social-item {
+    margin-right: $space-32;
+  }
+
+  &__social-icon {
+    display: block;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  &__logo--large {
+    display: none;
+    @include tablet {
+      display: inline-block;
+      margin-left: auto;
+    }
+    img {
+      height: $space-24;
+    }
+  }
+
+  &__logo--small {
+    height: 1.5rem;
+    margin-bottom: $space-16;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: $space-32;
+    margin-bottom: $space-32;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__info-item {
+    margin-bottom: $space-24;
+    @include tablet {
+      margin-right: $space-24;
+      width: calc(33.33% - 1.5rem);
+    }
+  }
+
+  &__info-text {
+    margin-bottom: $space-4;
+  }
+
+  &__info-text--bold {
+    font-weight: 600;
+  }
+
+  &__info-text--bold:last-of-type {
+    margin-bottom: $space-24;
+  }
+
+  &__info-email {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    margin-top: $space-24;
+    margin-bottom: $space-16;
+  }
+}
