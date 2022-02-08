@@ -68,3 +68,16 @@ h3 {
   margin-top: $space-48;
   margin-bottom: $space-36;
 }
+
+/* Label & Button styles */
+
+label,
+.button,
+.date {
+  line-height: m.div(20, 16) + rem;
+  text-transform: uppercase;
+  font-size: m.div(10, 16) + rem;
+  @include tablet {
+    font-size: m.div(12, 16) + rem;
+  }
+}

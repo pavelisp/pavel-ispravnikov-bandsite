@@ -120,9 +120,12 @@
 
 .gallery {
   &__title {
-    margin: $space-24 $space-36 $space-24;
+    padding: $space-24 $space-4 $space-24;
+    @include tablet {
+      padding: $space-36 $space-32 $space-16;
+    }
     @include desktop {
-      margin: $space-24 0;
+      padding: $space-36 0;
     }
   }
   &__photos {
@@ -156,5 +159,119 @@
   @include desktop {
     width: 1020px;
     margin: 0 auto;
+  }
+}
+
+/* Comments section */
+.comment {
+  &__wrapper {
+    display: flex;
+    margin: 0 $space-16;
+    @include tablet {
+      margin: 0 12%;
+    }
+    @include desktop {
+      margin: 0 25%;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: $space-48;
+  }
+}
+
+.comment-form {
+  &__title {
+    margin-inline: $space-16;
+    @include tablet {
+      margin-inline: $space-32;
+    }
+    @include desktop {
+      margin-inline: 0;
+    }
+  }
+  &__avatar {
+    flex-shrink: 0;
+    background-image: url("../assets/images/Mohan-muruge.jpg");
+    background-color: $mercury;
+    width: $space-48;
+    height: $space-48;
+    border-radius: 50%;
+    margin-top: $space-24;
+    margin-right: $space-16;
+    background-size: cover;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    color: $silver;
+    margin-bottom: 4px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $mercury;
+    padding: m.div(12, 16) + rem;
+    margin-bottom: $space-24;
+    background-color: $alabaster;
+    @include tablet {
+      padding: 1rem;
+    }
+    &:focus,
+    &:active {
+      border: 1px solid transparent;
+      outline: 1px solid $bandsite-black;
+    }
+    &--error,
+    &--error:active,
+    &--error:focus {
+      outline: 1px solid #d22d2d;
+      border: 1px solid transparent;
+    }
+  }
+  @include desktop {
+    width: 1020px;
+    margin: 0 auto;
+  }
+}
+
+/* Comment block style */
+
+.comment {
+  padding-top: $space-24;
+  @include desktop {
+    width: 1020px;
+    margin: 0 auto;
+  }
+  &__avatar {
+    flex-shrink: 0;
+    background-color: $mercury;
+    width: $space-48;
+    height: $space-48;
+    border-radius: 50%;
+
+    margin-right: $space-16;
+    background-size: cover;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $space-4;
+  }
+  &__name {
+    color: $bandsite-darkblack;
+  }
+  &__date {
+    color: $silver;
+  }
+  &__text {
+    color: $bandsite-black;
+    line-height: 1.5;
   }
 }

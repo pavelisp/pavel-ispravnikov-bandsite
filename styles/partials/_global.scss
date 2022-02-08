@@ -3,6 +3,14 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+/* border box */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 /* Header */
 
 .header-background {
@@ -187,4 +195,36 @@
     margin-top: $space-24;
     margin-bottom: $space-16;
   }
+}
+
+/* CTA Button */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bandsite-black;
+  color: $silver;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 $space-32;
+  border-radius: 4px;
+  text-decoration: none;
+  &:hover {
+    background-color: $bandsite-darkblack;
+    color: $white;
+  }
+  @include tablet {
+    margin-left: auto;
+    display: inline-flex;
+    min-width: 9.375rem;
+    width: auto;
+  }
+}
+
+/* Divider  */
+
+.divider {
+  padding-bottom: $space-24;
+  border-bottom: 1px solid $mercury;
 }
