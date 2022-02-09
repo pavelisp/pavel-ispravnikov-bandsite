@@ -6,9 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BandSite - Bio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,13 +33,13 @@
   <!-- Header end -->
 
   <!-- Hero start -->
-
-  <section class="hero">
-    <h1 class="hero__band-name">
-      The Bees Knees
-    </h1>
-  </section>
-
+  <div class="hero__wrapper hero__wrapper--bio">
+    <section class="hero">
+      <h1 class="hero__band-name">
+        The Bees Knees
+      </h1>
+    </section>
+  </div>
   <!-- Hero end -->
 
   <!-- MAIN SECTION start -->
@@ -115,15 +112,20 @@
       <h2 class="comment-form__title">Join the Conversation</h2>
       <div class="comment__wrapper divider">
         <div class="comment-form__avatar"></div>
-        <form action="post" class="comment-form__form">
+        <form action="" method="POST" class="comment-form__form">
           <label class="comment-form__label" for="fname">name</label>
           <input class="comment-form__input" type="text" id="fname" name="fname" value="">
           <label class="comment-form__label" for="lname">comment</label>
           <input class="comment-form__input" type="text" id="lname" name="lname" value="">
-          <a class="button" href="#">COMMENT</a>
+          <button class="button" href="#">COMMENT</button>
         </form>
       </div>
     </section>
+    <script>
+      document.querySelector('.comment-form__form .button').addEventListener('click', (e) => {
+        e.preventDefault();
+      })
+    </script>
     <!-- Comment form end -->
 
     <!-- Comments area start -->
@@ -142,26 +144,6 @@
       </div>
     </section>
     <!-- Comments area end -->
-    <!-- Comments area start -->
-    <section class="comment">
-      <div class="comment__wrapper divider">
-        <div class="comment__avatar"></div>
-        <div class="comment__content">
-          <div class="comment__header">
-            <p class="comment__name">Connor Walton</p>
-            <span class="comment__date date">02/20/2020</span>
-          </div>
-          <p class="comment__text">This is art. This is inexplicable magic expressed in the purest way, everything that
-            makes up this majestic work deserves reverence. Let us appreciate this for what it
-            is and what it contains.</p>
-        </div>
-      </div>
-    </section>
-    <!-- Comments area end -->
-
-
-
-
 
   </main>
 

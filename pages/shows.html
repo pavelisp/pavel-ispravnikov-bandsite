@@ -6,16 +6,127 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BandSite - Shows</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./styles/shows.css">
+  <link rel="stylesheet" href="../styles/shows.css">
 </head>
 
 <body>
+
+  <!-- Header start -->
+
+  <div class="header-background">
+    <header class="header">
+      <a href="../index.html"><img class="header__logo" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE Logo"></a>
+      <nav>
+        <ul class="header__nav">
+          <li class="header__nav-item"><a href="../index.html" class="header__nav-link">Biography</a>
+          </li>
+          <li class="header__nav-item"><a href="./shows.html"
+              class="header__nav-link  header__nav-link--active">Shows</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Header end -->
+
+  <!-- Hero start -->
+  <div class="hero__wrapper hero__wrapper--shows">
+    <section class="hero">
+      <div class="hero__info">
+        <h3 class="hero__album-info">
+          Beautiful Beasts Album
+        </h3>
+        <h1 class="hero__album-name">
+          Queen of Yellow x
+          For The Strings
+        </h1>
+      </div>
+      <iframe class="hero__player" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/747879520&color=%238b2bb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </section>
+  </div>
+
+  <!-- Hero end -->
+
+  <!-- Shows section start -->
+
+  <section class="shows">
+    <div class="shows__header">
+      <h2 class="shows__heading">Shows</h2>
+    </div>
+    <ul class="shows__list divider">
+      <li class="shows__listing">
+        <p class="shows__listing-info shows__listing-info--bold"><span
+            class="shows__row-heading shows__row-heading--mobile shows__row-heading--desktop">Date</span> Mon Sept
+          06 2021</p>
+        <p class="shows__listing-info"><span
+            class="shows__row-heading shows__row-heading--mobile shows__row-heading--desktop">Venue</span> Ronald
+          Lane</p>
+        <p class="shows__listing-info"><span
+            class="shows__row-heading shows__row-heading--mobile shows__row-heading--desktop">Location</span> San
+          Francisco, CA</p>
+        <button class="button shows__buy-button">Buy tickets</button>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- Shows section end -->
+
+
+  <!-- Footer start -->
+
+  <div class="footer-background">
+    <footer class="footer">
+      <div class="footer__header">
+        <h2 class="footer__title">Get in Touch</h2>
+        <ul class="footer__social-list">
+          <li class="footer__social-item"><a href="https://instagram.com/pavelisp" class="footer__social-link"><img
+                src="../assets/icons/Icon-instagram.svg" alt="Instagram icon" class="footer__social-icon"></a></li>
+          <li class="footer__social-item"><a href="https://facebook.com/pavel.ispravnikov"
+              class="footer__social-link"><img src="../assets/icons/Icon-facebook.svg" alt="Facebook icon"
+                class="footer__social-icon"></a></li>
+          <li class="footer__social-item"><a href="https://twitter.com/pavelisp" class="footer__social-link"><img
+                src="../assets/icons/Icon-twitter.svg" alt="Twitter icon" class="footer__social-icon"></a></li>
+        </ul>
+        <a href="../index.html" class="footer__logo--large"><img src="../assets/logos/logo-bandsite.svg"
+            alt="BANDSITE logo"></a>
+      </div>
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Cam Adams</h4>
+          <h4 class="footer__info-text footer__info-text--bold">The Bees Knees Management</h4>
+          <p class="footer__info-text">503 Broadway Penthouse,</p>
+          <p class="footer__info-text">New York, NY 10012, USA</p>
+          <a href="mailto:info@thebeesknees.com" class="footer__info-email">info@thebeesknees.com</a>
+        </div>
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Pearl Gregg</h4>
+          <h4 class="footer__info-text footer__info-text--bold">Limitless Artist Group</h4>
+          <p class="footer__info-text">Booking Agent for</p>
+          <p class="footer__info-text">US / South America / Japan</p>
+          <a href="mailto:pearl.gregg@limitlessag.com" class="footer__info-email">pearl.gregg@limitlessag.com</a>
+        </div>
+        <div class="footer__info-item">
+          <h4 class="footer__info-text footer__info-text--bold">Carson Whyte</h4>
+          <h4 class="footer__info-text footer__info-text--bold">ARCH Entertainment</h4>
+          <p class="footer__info-text">Booking Agent for</p>
+          <p class="footer__info-text">UK / EU / AU</p>
+          <a href="mailto:cwhyte@archentertainment.com" class="footer__info-email">cwhyte@archentertainment.com</a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <a href="../index.html"><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
+            class="footer__logo--small"></a>
+        <p class="footer__copyright-text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Footer end -->
 
 </body>
 

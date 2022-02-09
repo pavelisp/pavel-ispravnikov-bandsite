@@ -4,3 +4,119 @@
 @use "partials/typography" as *;
 @use "partials/mixins" as *;
 @use "partials/global" as *;
+
+/* Hero section - shows */
+.hero {
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    max-width: 20rem;
+    margin: $space-16 0;
+    @include tablet {
+      max-width: 35rem;
+    }
+    @include desktop {
+      flex-shrink: 0;
+      max-width: 30rem;
+    }
+  }
+  &__album-info {
+    margin: $space-24 0;
+    font-weight: 600;
+    @include tablet {
+      font-size: $space-24;
+    }
+  }
+  &__album-name {
+    font-size: $space-32;
+    font-weight: 600;
+    margin: 0 0 $space-8 0;
+    @include tablet {
+      font-size: $space-56;
+    }
+  }
+  &__player {
+    @include tablet {
+      max-width: 30rem;
+    }
+  }
+  &__wrapper--shows {
+    background-image: linear-gradient(
+        rgba($bandsite-black, 0.5),
+        rgba($bandsite-black, 0.5)
+      ),
+      url(../assets/images/hero-shows.jpg);
+  }
+}
+
+/* Shows section */
+
+.shows {
+  margin: $space-16 0;
+  @include tablet {
+    margin: $space-36;
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop {
+    width: 1020px;
+    margin: $space-36 auto;
+  }
+  &__header {
+    margin-bottom: $space-24;
+  }
+  &__heading {
+    margin: 0 $space-16;
+    display: block;
+    width: 100%;
+  }
+  &__listing {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 $space-16;
+    @include tablet {
+      margin: 0 $space-16;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  &__buy-button {
+    color: $white;
+    margin: 0;
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  &__listing-info {
+    margin-bottom: $space-24;
+    font-size: $space-16;
+    @include tablet {
+      margin: 0;
+    }
+  }
+  &__row-heading {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: $silver;
+    margin-bottom: $space-8;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__row-heading--tablet {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+}

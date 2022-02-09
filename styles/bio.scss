@@ -8,37 +8,16 @@
 /* Hero */
 
 .hero {
-  height: m.div(216, 16) + rem;
-  background-image: linear-gradient(
-      rgba($bandsite-black, 0.5),
-      rgba($bandsite-black, 0.5)
-    ),
-    url(../assets/images/hero-bio.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 0 $space-16;
-
-  @include tablet {
-    padding: 0 $space-36;
-    height: m.div(500, 16) + rem;
-  }
-  @include desktop {
-    height: m.div(715, 16) + rem;
-  }
-
   &__band-name {
-    width: 100%;
-
-    color: $white;
     font-weight: 600;
-    letter-spacing: 1.5;
-    margin: 0;
-    @include desktop {
-      width: 1020px;
-      margin: 0 auto;
-    }
+    font-size: $space-32;
+  }
+  &__wrapper--bio {
+    background-image: linear-gradient(
+        rgba($bandsite-black, 0.5),
+        rgba($bandsite-black, 0.5)
+      ),
+      url(../assets/images/hero-bio.jpg);
   }
 }
 

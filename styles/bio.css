@@ -136,6 +136,11 @@ label,
     margin: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    margin: 2.25rem 2.25rem 2.25rem 0;
+  }
+}
 .header__nav {
   display: block;
   width: 100%;
@@ -180,6 +185,43 @@ label,
   font-weight: 600;
   color: #ffffff;
   border-bottom: 4px solid #ffffff;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  color: #ffffff;
+  margin: 2.25rem 1rem;
+  min-height: 18vh;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    margin: 5rem auto;
+    width: 1020px;
+  }
+}
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__wrapper {
+    min-height: 32vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__wrapper {
+    min-height: 31vh;
+  }
 }
 
 /* Footer */
@@ -309,6 +351,9 @@ label,
   padding: 0 2rem;
   border-radius: 4px;
   text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 .button:hover {
   background-color: #000000;
@@ -330,38 +375,12 @@ label,
 }
 
 /* Hero */
-.hero {
-  height: 13.5rem;
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    padding: 0 2.25rem;
-    height: 31.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 44.6875rem;
-  }
-}
 .hero__band-name {
-  width: 100%;
-  color: #ffffff;
   font-weight: 600;
-  letter-spacing: 1.5;
-  margin: 0;
+  font-size: 2rem;
 }
-@media screen and (min-width: 1280px) {
-  .hero__band-name {
-    width: 1020px;
-    margin: 0 auto;
-  }
+.hero__wrapper--bio {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
 }
 
 /* About section */
