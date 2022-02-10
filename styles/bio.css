@@ -426,13 +426,13 @@ label,
     margin: 0 5rem 2rem;
   }
 }
-.about__bio p {
+.about__bio-text {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .about__bio p {
+  .about__bio-text {
     font-size: 1rem;
     padding-right: 1.5rem;
   }
