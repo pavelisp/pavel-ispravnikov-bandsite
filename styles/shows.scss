@@ -6,6 +6,7 @@
 @use "partials/global" as *;
 
 /* Hero section - shows */
+
 .hero {
   letter-spacing: 1px;
   display: flex;
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &__info {
     max-width: 20rem;
     margin: $space-16 0;
@@ -27,6 +29,7 @@
       max-width: 30rem;
     }
   }
+
   &__album-info {
     margin: $space-24 0;
     font-weight: 600;
@@ -34,6 +37,7 @@
       font-size: $space-24;
     }
   }
+
   &__album-name {
     font-size: $space-32;
     font-weight: 600;
@@ -42,11 +46,13 @@
       font-size: $space-56;
     }
   }
+
   &__player {
     @include tablet {
       max-width: 30rem;
     }
   }
+
   &__wrapper--shows {
     background-image: linear-gradient(
         rgba($bandsite-black, 0.5),
@@ -59,64 +65,80 @@
 /* Shows section */
 
 .shows {
-  margin: $space-16 0;
+  margin: $space-24 $space-16;
+
   @include tablet {
-    margin: $space-36;
-    display: flex;
-    flex-direction: column;
+    margin: $space-36 $space-36;
   }
+
   @include desktop {
     width: 1020px;
-    margin: $space-36 auto;
-  }
-  &__header {
-    margin-bottom: $space-24;
-  }
-  &__heading {
-    margin: 0 $space-16;
-    display: block;
-    width: 100%;
-  }
-  &__listing {
+    margin: $space-48 auto;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0 $space-16;
+    align-items: baseline;
+  }
+
+  &__title {
+    @include desktop {
+      margin-top: 0;
+      width: 25%;
+    }
+  }
+
+  &__listings {
+    flex-grow: 1;
+  }
+
+  &__item {
     @include tablet {
-      margin: 0 $space-16;
-      flex-direction: row;
-      justify-content: flex-start;
+      display: flex;
       align-items: center;
+      padding-top: $space-24;
     }
   }
-  &__buy-button {
-    color: $white;
-    margin: 0;
+
+  &__item-info {
     @include tablet {
-      margin-left: auto;
+      width: calc(100% / 4);
     }
   }
-  &__listing-info {
-    margin-bottom: $space-24;
-    font-size: $space-16;
+
+  &__headers--medium-large {
+    display: none;
+
     @include tablet {
-      margin: 0;
+      display: flex;
     }
   }
-  &__row-heading {
-    display: block;
+
+  &__header {
+    width: calc(100% / 4);
     text-transform: uppercase;
-    font-size: 0.8rem;
     color: $silver;
-    margin-bottom: $space-8;
+  }
+
+  &__item-info--bold {
+    font-weight: 600;
+  }
+
+  &__button {
+    color: $white;
+    margin-top: $space-16;
+    @include tablet {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__item-header {
+    color: $silver;
+    display: block;
+    margin-bottom: $space-4;
+    margin-top: $space-16;
+    font-weight: 400;
+    text-transform: uppercase;
+
     @include tablet {
       display: none;
-    }
-  }
-  &__row-heading--tablet {
-    display: none;
-    @include tablet {
-      display: block;
     }
   }
 }

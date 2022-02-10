@@ -35,7 +35,7 @@
     justify-content: flex-start;
   }
   &__logo {
-    margin: $space-16 0;
+    margin: $space-16 0 0;
     width: 7.5rem;
     @include tablet {
       margin: $space-36;
@@ -108,10 +108,10 @@
     background-size: cover;
     background-position: center;
     @include tablet {
-      min-height: 32vh;
+      min-height: 30rem;
     }
     @include desktop {
-      min-height: 31vh;
+      min-height: 40rem;
     }
   }
 }
