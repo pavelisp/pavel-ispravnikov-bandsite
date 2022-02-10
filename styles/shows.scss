@@ -1,7 +1,6 @@
 @use "sass:math" as m;
 @use "partials/colors" as *;
 @use "partials/variables" as *;
-@use "partials/typography" as *;
 @use "partials/mixins" as *;
 @use "partials/global" as *;
 
@@ -48,6 +47,9 @@
   }
 
   &__player {
+    display: inline-block;
+    width: 100%;
+    height: m.div(166, 16) + rem;
     @include tablet {
       max-width: 30rem;
     }
