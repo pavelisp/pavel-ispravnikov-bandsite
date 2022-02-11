@@ -1,4 +1,4 @@
-const shows = [
+const showsData = [
   {
     date: "Mon Sept 06 2021",
     venue: "Ronald Lane",
@@ -35,4 +35,49 @@ const shows = [
   },
 ];
 
-shows.forEach(x => console.log);
+
+let shows = document.querySelector(".shows__list");
+const showsList = document.querySelectorAll(".shows__item");
+
+showsData.forEach(x=>{
+  let showsItem = document.createElement('li');
+  let showsItemInfoDate = document.createElement('p');
+  let showsItemInfoVenue = document.createElement('p');
+  let showsItemInfoLocation = document.createElement('p');
+  let showsItemHeader = document.createElement('span');
+  let showsButton = document.createElement('button');
+
+  showsItem.classList.add('shows__item', 'divider');
+  showsItemInfoDate.classList.add('shows__item-info','shows__item-info--bold');
+  showsItemInfoVenue.classList.add('shows__item-info');
+  showsItemInfoLocation.classList.add('shows__item-info');
+  showsItemHeader.classList.add('shows__item-header');
+  showsButton.classList.add('shows__button','button');
+
+  showsItemInfoDate.append(showsItemHeader);
+  showsItemInfoDate.innerText = x.date;
+  showsItemInfoVenue.innerText = x.venue;
+  showsItemInfoLocation.innerText = x.location;
+  showsButton.innerText = 'Buy Tickets'
+
+  showsItem.appendChild(showsItemInfoDate);
+  showsItem.appendChild(showsItemInfoVenue)
+    showsItem.appendChild(showsItemInfoLocation)
+    showsItem.appendChild(showsButton)
+  shows.appendChild(showsItem);
+})
+
+
+
+shows.addEventListener("click", (e) => {
+e.preventDefault();
+
+for(let item of shows.children){
+  item.classList.remove('shows__item--active')
+}
+  if((e.target.tagName ==='P' || e.target.tagName ==='BUTTON') && !e.target.parentNode.classList.contains('shows__item--active')){  
+    e.target.parentNode.classList.add('shows__item--active');
+  } else if (e.target.tagName === 'LI' && !e.target.classList.contains('shows__item--active')){
+    e.target.classList.add('shows__item--active')
+  }
+});

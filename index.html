@@ -10,6 +10,8 @@
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles/bio.css">
+
+
 </head>
 
 <body>
@@ -115,37 +117,75 @@
       <div class="comment__wrapper divider">
         <div class="comment-form__avatar"></div>
         <form method="POST" class="comment-form__form">
-          <label class="comment-form__label" for="fname">name</label>
-          <input class="comment-form__input" type="text" id="fname" name="fname" value="">
-          <label class="comment-form__label" for="lname">comment</label>
-          <input class="comment-form__input" type="text" id="lname" name="lname" value="">
-          <button class="button">COMMENT</button>
+          <label class="comment-form__label" for="name">name</label>
+          <input class="comment-form__input" type="text" id="name" name="name" value="">
+          <label class="comment-form__label" for="comment">comment</label>
+          <input class="comment-form__input" type="text" id="comment" name="comment" value="">
+          <button class="comment-button button">COMMENT</button>
         </form>
       </div>
     </section>
-    <script>
-      document.querySelector('.comment-form__form .button').addEventListener('click', (e) => {
-        e.preventDefault();
-      })
-    </script>
+
     <!-- Comment form end -->
 
-    <!-- Comments area start -->
-    <section class="comment">
-      <div class="comment__wrapper divider">
-        <div class="comment__avatar"></div>
-        <div class="comment__content">
-          <div class="comment__header">
-            <h3 class="comment__name">Connor Walton</h3>
-            <span class="comment__date date">02/20/2020</span>
+    <!-- Comments section start -->
+
+    <section class="comments">
+
+      <!-- 
+
+      <article class="comment">
+        <div class="comment__wrapper divider">
+          <div class="comment__avatar"></div>
+          <div class="comment__content">
+            <div class="comment__header">
+              <h4 class="comment__name">Connor Walton</h4>
+              <span class="comment__date date">02/17/2021</span>
+            </div>
+            <p class="comment__text">This is art. This is inexplicable magic expressed in the purest way, everything
+              that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it
+              contains.</p>
           </div>
-          <p class="comment__text">This is art. This is inexplicable magic expressed in the purest way, everything that
-            makes up this majestic work deserves reverence. Let us appreciate this for what it
-            is and what it contains.</p>
         </div>
-      </div>
+      </article>
+
+      <article class="comment">
+        <div class="comment__wrapper divider">
+          <div class="comment__avatar"></div>
+          <div class="comment__content">
+            <div class="comment__header">
+              <h4 class="comment__name">Emilie Beach</h4>
+              <span class="comment__date date">01/09/2021</span>
+            </div>
+            <p class="comment__text">I feel blessed to have seen them in person. What a show! They were just perfection.
+              If there was one day of my life I could relive, this would be it. What an incredible day.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="comment">
+        <div class="comment__wrapper divider">
+          <div class="comment__avatar"></div>
+          <div class="comment__content">
+            <div class="comment__header">
+              <h4 class="comment__name">Miles Acosta</h4>
+              <span class="comment__date date">12/20/2020</span>
+            </div>
+            <p class="comment__text">I can't stop listening. Every time I hear one of their songs - the vocals - it
+              gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get
+              enough.</p>
+          </div>
+        </div>
+      </article>
+ -->
+
+
     </section>
-    <!-- Comments area end -->
+
+    <!-- Comments section end -->
+
+
+
 
   </main>
 
@@ -202,6 +242,9 @@
   </div>
 
   <!-- Footer end -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+  <script src="./scripts/index-page.js"></script>
 
 </body>
 

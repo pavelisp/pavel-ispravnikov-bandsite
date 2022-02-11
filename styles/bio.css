@@ -557,6 +557,9 @@ label,
     margin-inline: 0;
   }
 }
+.comment-form__name {
+  margin: 0;
+}
 .comment-form__avatar {
   flex-shrink: 0;
   background-image: url("../assets/images/Mohan-muruge.jpg");

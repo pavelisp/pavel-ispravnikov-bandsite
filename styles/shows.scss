@@ -67,7 +67,7 @@
 /* Shows section */
 
 .shows {
-  margin: $space-24 $space-16;
+  margin: $space-24 0;
 
   @include tablet {
     margin: $space-36 $space-36;
@@ -81,6 +81,10 @@
   }
 
   &__title {
+    padding: $space-16;
+    @include tablet {
+      padding: $space-24;
+    }
     @include desktop {
       margin-top: 0;
       width: 25%;
@@ -92,10 +96,17 @@
   }
 
   &__item {
+    padding: $space-16;
     @include tablet {
       display: flex;
       align-items: center;
-      padding-top: $space-24;
+      padding: $space-24;
+    }
+    &:hover {
+      background-color: $alabaster;
+    }
+    &--active {
+      background-color: $mercury;
     }
   }
 
@@ -107,9 +118,10 @@
 
   &__headers--medium-large {
     display: none;
-
+    padding: $space-16;
     @include tablet {
       display: flex;
+      padding: $space-24;
     }
   }
 
