@@ -1,3 +1,5 @@
+// Mockup data for the shows
+
 const showsData = [
   {
     date: "Mon Sept 06 2021",
@@ -35,9 +37,11 @@ const showsData = [
   },
 ];
 
+// Selecting the element to insert shows array content into
 
-let shows = document.querySelector(".shows__list");
-const showsList = document.querySelectorAll(".shows__item");
+const shows = document.querySelector(".shows__list");
+
+// Populating the shows list with items from the shows array
 
 showsData.forEach(x=>{
   let showsItem = document.createElement('li');
@@ -67,17 +71,27 @@ showsData.forEach(x=>{
   shows.appendChild(showsItem);
 })
 
-
+// Added event listener on shows items to add active state on clicked items
 
 shows.addEventListener("click", (e) => {
 e.preventDefault();
 
-for(let item of shows.children){
-  item.classList.remove('shows__item--active')
-}
-  if((e.target.tagName ==='P' || e.target.tagName ==='BUTTON') && !e.target.parentNode.classList.contains('shows__item--active')){  
-    e.target.parentNode.classList.add('shows__item--active');
-  } else if (e.target.tagName === 'LI' && !e.target.classList.contains('shows__item--active')){
-    e.target.classList.add('shows__item--active')
+// Add shows listing active status on clicked item if doesn't already have it & remove if has it
+
+if(e.target.closest('.shows__item').classList.contains('shows__item--active') === false ){
+
+  // Remove active status from all the show listings
+
+  for(let item of shows.children){
+    item.classList.remove('shows__item--active')
   }
+    // Add active status to clicked li
+
+  e.target.closest('.shows__item').classList.add('shows__item--active')
+} else {
+
+    // remove active status from clicked li
+  e.target.closest('.shows__item').classList.remove('shows__item--active')
+}
+
 });

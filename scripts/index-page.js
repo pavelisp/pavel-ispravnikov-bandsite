@@ -124,7 +124,6 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-
 // Loop over comments array to add them to the bio page DOM
 
 commentData.forEach((oneComment) => {
