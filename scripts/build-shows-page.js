@@ -48,20 +48,30 @@ showsData.forEach(x=>{
   let showsItemInfoDate = document.createElement('p');
   let showsItemInfoVenue = document.createElement('p');
   let showsItemInfoLocation = document.createElement('p');
-  let showsItemHeader = document.createElement('span');
+  let showsItemHeaderDate = document.createElement('span');
+  let showsItemHeaderVenue = document.createElement('span');
+  let showsItemHeaderLocation = document.createElement('span');
   let showsButton = document.createElement('button');
 
   showsItem.classList.add('shows__item', 'divider');
   showsItemInfoDate.classList.add('shows__item-info','shows__item-info--bold');
   showsItemInfoVenue.classList.add('shows__item-info');
   showsItemInfoLocation.classList.add('shows__item-info');
-  showsItemHeader.classList.add('shows__item-header');
+  showsItemHeaderDate.classList.add('shows__item-header');
+  showsItemHeaderDate.append('Date');
+  showsItemHeaderVenue.classList.add('shows__item-header');
+  showsItemHeaderVenue.append('Venue');
+  showsItemHeaderLocation.classList.add('shows__item-header');
+  showsItemHeaderLocation.append('Location');
   showsButton.classList.add('shows__button','button');
 
-  showsItemInfoDate.append(showsItemHeader);
+  
   showsItemInfoDate.innerText = x.date;
+  showsItemInfoDate.prepend(showsItemHeaderDate);
   showsItemInfoVenue.innerText = x.venue;
+  showsItemInfoVenue.prepend(showsItemHeaderVenue);
   showsItemInfoLocation.innerText = x.location;
+  showsItemInfoLocation.prepend(showsItemHeaderLocation);
   showsButton.innerText = 'Buy Tickets'
 
   showsItem.appendChild(showsItemInfoDate);
