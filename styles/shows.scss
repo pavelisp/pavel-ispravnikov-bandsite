@@ -7,14 +7,23 @@
 /* Hero section - shows */
 
 .hero {
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @include desktop {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  &--shows {
+    background-image: linear-gradient(
+        rgba($bandsite-black, 0.5),
+        rgba($bandsite-black, 0.5)
+      ),
+      url(../assets/images/hero-shows.jpg);
+  }
+  &__wrapper {
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__info {
@@ -53,14 +62,6 @@
     @include tablet {
       max-width: 30rem;
     }
-  }
-
-  &__wrapper--shows {
-    background-image: linear-gradient(
-        rgba($bandsite-black, 0.5),
-        rgba($bandsite-black, 0.5)
-      ),
-      url(../assets/images/hero-shows.jpg);
   }
 }
 

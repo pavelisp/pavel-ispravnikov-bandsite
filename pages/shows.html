@@ -10,15 +10,12 @@
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/shows.css">
-
 </head>
 
 <body>
-
   <!-- Header start -->
-
-  <div class="header-background">
-    <header class="header">
+  <header class="header">
+    <div class="header__wrapper">
       <a href="../index.html"><img class="header__logo" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE Logo"></a>
       <nav>
         <ul class="header__nav">
@@ -28,14 +25,12 @@
               class="header__nav-link  header__nav-link--active">Shows</a></li>
         </ul>
       </nav>
-    </header>
-  </div>
-
+    </div>
+  </header>
   <!-- Header end -->
-
   <!-- Hero start -->
-  <div class="hero__wrapper hero__wrapper--shows">
-    <section class="hero">
+  <section class="hero hero--shows">
+    <div class="hero__wrapper">
       <div class="hero__info">
         <h3 class="hero__album-info">
           Beautiful Beasts Album
@@ -47,13 +42,10 @@
       </div>
       <iframe class="hero__player"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214533915&color=%238b2bb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </section>
-  </div>
-
+    </div>
+  </section>
   <!-- Hero end -->
-
   <!-- Shows section start -->
-
   <section class="shows">
     <h2 class="shows__title">Shows</h2>
     <div class="shows__listings">
@@ -65,14 +57,10 @@
       <ul class="shows__list"></ul>
     </div>
   </section>
-
   <!-- Shows section end -->
-
-
   <!-- Footer start -->
-
-  <div class="footer-background">
-    <footer class="footer">
+  <footer class="footer">
+    <div class="footer__wrapper">
       <div class="footer__header">
         <h2 class="footer__title">Get in Touch</h2>
         <ul class="footer__social-list">
@@ -84,7 +72,7 @@
           <li class="footer__social-item"><a href="https://twitter.com/pavelisp" class="footer__social-link"><img
                 src="../assets/icons/Icon-twitter.svg" alt="Twitter icon" class="footer__social-icon"></a></li>
         </ul>
-        <a href="../index.html" class="footer__logo--large"><img src="../assets/logos/logo-bandsite.svg"
+        <a href="./index.html" class="footer__logo--large"><img src="../assets/logos/logo-bandsite.svg"
             alt="BANDSITE logo"></a>
       </div>
       <div class="footer__info">
@@ -111,15 +99,13 @@
         </div>
       </div>
       <div class="footer__copyright">
-        <a href="../index.html"><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
+        <a href="./index.html"><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
             class="footer__logo--small"></a>
         <p class="footer__copyright-text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
       </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
   <!-- Footer end -->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="../scripts/build-shows-page.js"></script>

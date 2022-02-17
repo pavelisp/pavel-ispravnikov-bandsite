@@ -70,7 +70,7 @@ h3 {
   margin-bottom: $space-36;
 }
 
-/* Label & Button styles */
+/* Label & Input & Button styles */
 
 label,
 .button,
@@ -83,6 +83,15 @@ label,
   }
 }
 
+input,
+textarea {
+  resize: none;
+  font-weight: 400;
+  font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: m.div(14, 16) + rem;
+  font-weight: m.div(13, 16);
+}
+
 /* border box */
 
 *,
@@ -93,27 +102,27 @@ label,
 
 /* Header */
 
-.header-background {
-  background-color: $bandsite-black;
-}
-
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include desktop {
-    max-width: 1020px;
-    margin: 0 auto;
+  background-color: $bandsite-black;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    @include desktop {
+      max-width: 1020px;
+      margin: 0 auto;
+    }
   }
   nav {
     display: block;
     width: 100%;
   }
 
-  @include tablet {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
   &__logo {
     margin: $space-16 0 0;
     width: 7.5rem;
@@ -171,47 +180,50 @@ label,
 .hero {
   width: 100%;
   color: $white;
-  margin: $space-36 $space-16;
-  min-height: 18vh;
   display: flex;
   align-items: center;
+
   @include tablet {
-    margin: $space-36;
+    min-height: 30rem;
   }
   @include desktop {
-    margin: $space-80 auto;
-    width: 1020px;
+    min-height: 40rem;
   }
   &__wrapper {
+    margin: $space-36 $space-16;
+
+    min-height: 18vh;
     display: flex;
     align-items: center;
     background-size: cover;
     background-position: center;
     @include tablet {
-      min-height: 30rem;
+      margin: $space-36;
     }
     @include desktop {
-      min-height: 40rem;
+      margin: $space-80 auto;
+      width: 1020px;
+      min-height: 80vh;
     }
   }
 }
 
 /* Footer */
 
-.footer-background {
+.footer {
   background-color: $bandsite-black;
-  padding: $space-16;
   color: $white;
   letter-spacing: 1px;
-  @include tablet {
-    padding: $space-36;
-  }
-}
 
-.footer {
-  @include desktop {
-    width: 1020px;
-    margin: 0 auto;
+  &__wrapper {
+    padding: $space-16;
+    @include desktop {
+      width: 1020px;
+      margin: 0 auto;
+    }
+    @include tablet {
+      padding: $space-36;
+    }
   }
   &__header {
     display: inline-flex;
@@ -223,7 +235,6 @@ label,
       align-items: baseline;
     }
   }
-
   &__title {
     font-weight: 600;
     font-size: 1.8rem;

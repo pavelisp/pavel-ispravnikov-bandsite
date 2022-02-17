@@ -6,17 +6,12 @@
 
 /* Hero */
 
-.hero {
-  &__band-name {
-    font-weight: 600;
-  }
-  &__wrapper--bio {
-    background-image: linear-gradient(
-        rgba($bandsite-black, 0.5),
-        rgba($bandsite-black, 0.5)
-      ),
-      url(../assets/images/hero-bio.jpg);
-  }
+.hero--bio {
+  background-image: linear-gradient(
+      rgba($bandsite-black, 0.5),
+      rgba($bandsite-black, 0.5)
+    ),
+    url(../assets/images/hero-bio.jpg);
 }
 
 /* About section */
@@ -87,15 +82,18 @@
 
 /* Gallery section */
 
-.gallery-background {
+.gallery {
   background-color: $alabaster;
   padding: $space-24 $space-16;
-  @include tablet {
-    padding: $space-32 0;
+  &__wrapper {
+    @include tablet {
+      padding: $space-32 0;
+    }
+    @include desktop {
+      width: 1020px;
+      margin: 0 auto;
+    }
   }
-}
-
-.gallery {
   &__title {
     padding: $space-24 $space-4 $space-24;
     @include tablet {
@@ -133,10 +131,6 @@
       filter: grayscale(0);
     }
   }
-  @include desktop {
-    width: 1020px;
-    margin: 0 auto;
-  }
 }
 
 /* Comments section */
@@ -144,6 +138,7 @@
   &__wrapper {
     display: flex;
     margin: 0 $space-16;
+    padding-bottom: $space-16;
     @include tablet {
       margin: 0 12%;
     }
@@ -212,6 +207,7 @@
       border: 1px solid transparent;
     }
   }
+
   @include desktop {
     width: 1020px;
     margin: 0 auto;
@@ -253,5 +249,61 @@
   &__text {
     color: $bandsite-black;
     line-height: 1.5;
+  }
+  &__actions {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: $space-8;
+  }
+  &__delete {
+    margin-left: $space-8;
+    display: flex;
+    align-items: baseline;
+    padding: $space-4 $space-8;
+    background-color: rgba($bandsite-black, 0.5);
+    color: $alabaster;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(231, 90, 90);
+    }
+  }
+  &__delete-icon {
+    margin-right: $space-4;
+  }
+}
+
+/* Comment Like Block */
+
+.like {
+  display: inline-flex;
+  align-items: center;
+  &__count {
+    display: inline-block;
+    min-width: 1.5rem;
+    text-align: end;
+    font-weight: bold;
+    margin-right: $space-4;
+  }
+  &__button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: $space-4 $space-8;
+    background-color: rgba($bandsite-black, 0.1);
+    margin-right: 0.2rem;
+    display: inline-flex;
+    align-items: baseline;
+    border: 0;
+    &:hover {
+      background-color: rgba(rgb(212, 113, 241), 0.6);
+
+      .like__icon {
+        color: rgba(rgb(212, 113, 241), 1);
+      }
+    }
+  }
+  &__icon {
+    margin-left: $space-4;
+    display: inline-block;
   }
 }

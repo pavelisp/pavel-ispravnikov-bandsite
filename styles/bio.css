@@ -78,7 +78,7 @@ h3 {
   margin-bottom: 2.25rem;
 }
 
-/* Label & Button styles */
+/* Label & Input & Button styles */
 label,
 .button,
 .date {
@@ -94,6 +94,15 @@ label,
   }
 }
 
+input,
+textarea {
+  resize: none;
+  font-weight: 400;
+  font-family: "Avenir Next", Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 0.8125;
+}
+
 /* border box */
 *,
 *:before,
@@ -102,17 +111,22 @@ label,
 }
 
 /* Header */
-.header-background {
+.header {
   background-color: #323232;
 }
-
-.header {
+.header__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 1280px) {
-  .header {
+  .header__wrapper {
     max-width: 1020px;
     margin: 0 auto;
   }
@@ -120,12 +134,6 @@ label,
 .header nav {
   display: block;
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
 }
 .header__logo {
   margin: 1rem 0 0;
@@ -191,23 +199,22 @@ label,
 .hero {
   width: 100%;
   color: #ffffff;
-  margin: 2.25rem 1rem;
-  min-height: 18vh;
   display: flex;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    margin: 2.25rem;
+    min-height: 30rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    margin: 5rem auto;
-    width: 1020px;
+    min-height: 40rem;
   }
 }
 .hero__wrapper {
+  margin: 2.25rem 1rem;
+  min-height: 18vh;
   display: flex;
   align-items: center;
   background-size: cover;
@@ -215,32 +222,35 @@ label,
 }
 @media screen and (min-width: 768px) {
   .hero__wrapper {
-    min-height: 30rem;
+    margin: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__wrapper {
-    min-height: 40rem;
+    margin: 5rem auto;
+    width: 1020px;
+    min-height: 80vh;
   }
 }
 
 /* Footer */
-.footer-background {
+.footer {
   background-color: #323232;
-  padding: 1rem;
   color: #ffffff;
   letter-spacing: 1px;
 }
-@media screen and (min-width: 768px) {
-  .footer-background {
-    padding: 2.25rem;
-  }
+.footer__wrapper {
+  padding: 1rem;
 }
-
 @media screen and (min-width: 1280px) {
-  .footer {
+  .footer__wrapper {
     width: 1020px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    padding: 2.25rem;
   }
 }
 .footer__header {
@@ -375,10 +385,7 @@ label,
 }
 
 /* Hero */
-.hero__band-name {
-  font-weight: 600;
-}
-.hero__wrapper--bio {
+.hero--bio {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
 }
 
@@ -459,16 +466,21 @@ label,
 }
 
 /* Gallery section */
-.gallery-background {
+.gallery {
   background-color: #fafafa;
   padding: 1.5rem 1rem;
 }
 @media screen and (min-width: 768px) {
-  .gallery-background {
+  .gallery__wrapper {
     padding: 2rem 0;
   }
 }
-
+@media screen and (min-width: 1280px) {
+  .gallery__wrapper {
+    width: 1020px;
+    margin: 0 auto;
+  }
+}
 .gallery__title {
   padding: 1.5rem 0.25rem 1.5rem;
 }
@@ -518,17 +530,12 @@ label,
 .gallery__photo:hover {
   filter: grayscale(0);
 }
-@media screen and (min-width: 1280px) {
-  .gallery {
-    width: 1020px;
-    margin: 0 auto;
-  }
-}
 
 /* Comments section */
 .comment__wrapper {
   display: flex;
   margin: 0 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .comment__wrapper {
@@ -645,4 +652,58 @@ label,
 .comment__text {
   color: #323232;
   line-height: 1.5;
+}
+.comment__actions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 0.5rem;
+}
+.comment__delete {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.comment__delete:hover {
+  background-color: #e75a5a;
+}
+.comment__delete-icon {
+  margin-right: 0.25rem;
+}
+
+/* Comment Like Block */
+.like {
+  display: inline-flex;
+  align-items: center;
+}
+.like__count {
+  display: inline-block;
+  min-width: 1.5rem;
+  text-align: end;
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+.like__button {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(50, 50, 50, 0.1);
+  margin-right: 0.2rem;
+  display: inline-flex;
+  align-items: baseline;
+  border: 0;
+}
+.like__button:hover {
+  background-color: rgba(212, 113, 241, 0.6);
+}
+.like__button:hover .like__icon {
+  color: #d471f1;
+}
+.like__icon {
+  margin-left: 0.25rem;
+  display: inline-block;
 }
