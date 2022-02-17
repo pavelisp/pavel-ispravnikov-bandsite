@@ -1,22 +1,32 @@
-// Mock data for comments
+// Bandsite API: 104baf9f-b99e-42b2-a940-473e1f68bbb9
 
-let commentData = [
-  {
-    name: "Miles Acosta",
-    value: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    timestamp: new Date(2020, 12, 20)
-  },
-  {
-    name: "Emilie Beach",
-    value: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    timestamp: new Date(2021, 01, 09)
-  },
-  {
-    name: "Connor Walton",
-    value: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    timestamp: new Date(2021, 02, 17)
-  }
-];
+// Getting comments from BandSite API
+
+const loadComments = () => { axios.get('https://project-1-api.herokuapp.com/comments?api_key=104baf9f-b99e-42b2-a940-473e1f68bbb9')
+.then((res)=>{
+  console.log(res.data)
+res.data.forEach((comment)=>{
+  let randomNum = Math.floor(Math.random()*1111)
+  displayComment(comment, `url(https://source.unsplash.com/100x100/?person?sig${randomNum})`)});
+})};
+
+
+// Post comment on form submit
+
+const postComment = (name, comment) => {
+  axios({
+    method: 'post',
+    url: 'https://project-1-api.herokuapp.com/comments?api_key=104baf9f-b99e-42b2-a940-473e1f68bbb9',
+    headers: {'Content-Type': 'application/json'},
+    data: {
+      name: name,
+      comment: comment
+    },
+
+  }).then(()=>{
+    loadComments();
+  })
+}
 
 // Getting references to elements on the page
 
@@ -28,15 +38,17 @@ const form = document.querySelector(".comment-form__form");
 
 // Function that constructs a comment and appends it to the comments list in DOM
 
-const displayComment = (cmnt) => {
+const displayComment = (cmnt, portrait) => {
   const comment = document.createElement("article");
   comment.classList.add("comment");
+  comment.setAttribute('id', cmnt.id);
 
   const commentWrapper = document.createElement("div");
   commentWrapper.classList.add("comment__wrapper", "divider");
 
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment__avatar");
+  commentAvatar.style.backgroundImage = portrait;
 
   const commentContent = document.createElement("div");
   commentContent.classList.add("comment__content");
@@ -54,7 +66,7 @@ const displayComment = (cmnt) => {
 
   const commentText = document.createElement("p");
   commentText.classList.add("comment__text");
-  commentText.innerText = cmnt.value;
+  commentText.innerText = cmnt.comment;
 
   commentHeader.appendChild(commentName);
   commentHeader.appendChild(commentDate);
@@ -87,25 +99,15 @@ form.addEventListener("submit", (e) => {
 
   if (nameInput.value && commentInput.value) {
 
-    // Add input data as an object to the comments array
+    // Push comment data into BandSite API
 
-    commentData.push({
-      name: nameInput.value,
-      value: commentInput.value,
-      timestamp: new Date(),
-    });
-
+    postComment(nameInput.value, commentInput.value)
+    
     // Clear all the comments
 
     while (comments.children[0]) {
       comments.children[0].remove();
     }
-
-    // Loop over comments array and add them to the DOM
-
-    commentData.forEach((oneComment) => {
-      displayComment(oneComment);
-    });
 
     // Clear form inputs
 
@@ -124,8 +126,6 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// Loop over comments array to add them to the bio page DOM
+// Initial load of the comments
 
-commentData.forEach((oneComment) => {
-  displayComment(oneComment);
-});
+loadComments();

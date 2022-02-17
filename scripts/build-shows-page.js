@@ -1,41 +1,12 @@
-// Mockup data for the shows
+// Bandsite API: 104baf9f-b99e-42b2-a940-473e1f68bbb9
 
-const showsData = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
+// Getting shows data from BandSite API
 
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club ",
-    location: "San Francisco, CA",
-  },
-];
+axios.get('https://project-1-api.herokuapp.com/showdates?api_key=104baf9f-b99e-42b2-a940-473e1f68bbb9')
+.then((res)=>{
+  console.log(res.data)
+res.data.forEach((show)=>{loadShows(show)});
+});
 
 // Selecting the element to insert shows array content into
 
@@ -43,7 +14,8 @@ const shows = document.querySelector(".shows__list");
 
 // Populating the shows list with items from the shows array
 
-showsData.forEach(x=>{
+const loadShows = x =>{
+  
   let showsItem = document.createElement('li');
   let showsItemInfoDate = document.createElement('p');
   let showsItemInfoVenue = document.createElement('p');
@@ -64,11 +36,10 @@ showsData.forEach(x=>{
   showsItemHeaderLocation.classList.add('shows__item-header');
   showsItemHeaderLocation.append('Location');
   showsButton.classList.add('shows__button','button');
-
   
-  showsItemInfoDate.innerText = x.date;
+  showsItemInfoDate.innerText = moment(Number(x.date)).format('ddd MMM DD YYYY');
   showsItemInfoDate.prepend(showsItemHeaderDate);
-  showsItemInfoVenue.innerText = x.venue;
+  showsItemInfoVenue.innerText = x.place;
   showsItemInfoVenue.prepend(showsItemHeaderVenue);
   showsItemInfoLocation.innerText = x.location;
   showsItemInfoLocation.prepend(showsItemHeaderLocation);
@@ -79,7 +50,7 @@ showsData.forEach(x=>{
     showsItem.appendChild(showsItemInfoLocation)
     showsItem.appendChild(showsButton)
   shows.appendChild(showsItem);
-})
+};
 
 // Added event listener on shows items to add active state on clicked items
 
