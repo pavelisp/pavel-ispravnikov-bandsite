@@ -14,11 +14,13 @@
       ),
       url(../assets/images/hero-shows.jpg);
   }
+
   &__wrapper {
     letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
@@ -29,9 +31,11 @@
   &__info {
     max-width: 20rem;
     margin: $space-16 0;
+
     @include tablet {
       max-width: 35rem;
     }
+
     @include desktop {
       flex-shrink: 0;
       max-width: 30rem;
@@ -41,6 +45,7 @@
   &__album-info {
     margin: $space-24 0;
     font-weight: 600;
+
     @include tablet {
       font-size: $space-24;
     }
@@ -50,6 +55,7 @@
     font-size: $space-32;
     font-weight: 600;
     margin: 0 0 $space-8 0;
+
     @include tablet {
       font-size: $space-56;
     }
@@ -59,6 +65,7 @@
     display: inline-block;
     width: 100%;
     height: m.div(166, 16) + rem;
+
     @include tablet {
       max-width: 30rem;
     }
@@ -83,9 +90,11 @@
 
   &__title {
     padding: $space-16;
+
     @include tablet {
       padding: $space-24;
     }
+
     @include desktop {
       margin-top: 0;
       width: 25%;
@@ -98,14 +107,17 @@
 
   &__item {
     padding: $space-16;
+
     @include tablet {
       display: flex;
       align-items: center;
       padding: $space-24;
     }
+
     &:hover {
       background-color: $alabaster;
     }
+
     &--active {
       background-color: $mercury;
     }
@@ -120,6 +132,7 @@
   &__headers--medium-large {
     display: none;
     padding: $space-16;
+
     @include tablet {
       display: flex;
       padding: $space-24;
@@ -139,6 +152,7 @@
   &__button {
     color: $white;
     margin-top: $space-16;
+
     @include tablet {
       margin: 0 0 0 auto;
     }

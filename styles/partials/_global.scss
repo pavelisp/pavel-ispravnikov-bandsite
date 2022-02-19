@@ -118,6 +118,7 @@ textarea {
       margin: 0 auto;
     }
   }
+
   nav {
     display: block;
     width: 100%;
@@ -143,6 +144,7 @@ textarea {
     min-width: 100%;
     display: flex;
   }
+
   &__nav-item {
     flex-grow: 1;
     text-align: center;
@@ -151,6 +153,7 @@ textarea {
       margin: 0 $space-16;
     }
   }
+
   &__nav-link {
     display: block;
     font-size: m.div(14, 16) + rem;
@@ -160,13 +163,16 @@ textarea {
     padding: $space-16 0;
     margin: 0;
     border-bottom: 4px solid transparent;
+
     @include tablet {
       padding: 2.25rem 0;
     }
+
     &:hover {
       color: $white;
       border-bottom: 4px solid $white;
     }
+
     &--active {
       font-weight: 600;
       color: $white;
@@ -189,6 +195,7 @@ textarea {
   @include desktop {
     min-height: 40rem;
   }
+
   &__wrapper {
     margin: $space-36 $space-16;
 
@@ -197,9 +204,11 @@ textarea {
     align-items: center;
     background-size: cover;
     background-position: center;
+
     @include tablet {
       margin: $space-36;
     }
+
     @include desktop {
       margin: $space-80 auto;
       width: 1020px;
@@ -217,17 +226,21 @@ textarea {
 
   &__wrapper {
     padding: $space-16;
+
     @include desktop {
       width: 1020px;
       margin: 0 auto;
     }
+
     @include tablet {
       padding: $space-36;
     }
   }
+
   &__header {
     display: inline-flex;
     flex-direction: column;
+
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -235,14 +248,17 @@ textarea {
       align-items: baseline;
     }
   }
+
   &__title {
     font-weight: 600;
     font-size: 1.8rem;
     margin-right: $space-24;
+
     @include tablet {
       width: calc(33.33% - 1.5rem);
     }
   }
+
   &__social-list {
     display: flex;
     align-items: baseline;
@@ -264,10 +280,12 @@ textarea {
 
   &__logo--large {
     display: none;
+
     @include tablet {
       display: inline-block;
       margin-left: auto;
     }
+
     img {
       height: $space-24;
     }
@@ -276,6 +294,7 @@ textarea {
   &__logo--small {
     height: 1.5rem;
     margin-bottom: $space-16;
+
     @include tablet {
       display: none;
     }
@@ -286,6 +305,7 @@ textarea {
     flex-direction: column;
     margin-top: $space-32;
     margin-bottom: $space-32;
+
     @include tablet {
       flex-direction: row;
       justify-content: flex-start;
@@ -294,6 +314,7 @@ textarea {
 
   &__info-item {
     margin-bottom: $space-24;
+
     @include tablet {
       margin-right: $space-24;
       width: calc(33.33% - 1.5rem);
@@ -337,10 +358,12 @@ textarea {
   font-weight: 600;
   border: none;
   cursor: pointer;
+
   &:hover {
     background-color: $bandsite-darkblack;
     color: $white;
   }
+
   @include tablet {
     margin-left: auto;
     display: inline-flex;

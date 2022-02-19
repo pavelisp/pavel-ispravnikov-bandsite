@@ -18,21 +18,26 @@
 
 .about {
   margin: 1rem;
+
   &__title {
     margin: $space-24 0 $space-16;
+
     @include tablet {
       padding: $space-36 $space-24 $space-16;
     }
   }
+
   &__photo {
     display: inline-block;
     width: 100%;
     margin-bottom: $space-16;
+
     @include tablet {
       width: calc(100% - 5rem * 2);
       margin: 0 $space-80 $space-32;
     }
   }
+
   @include desktop {
     width: 1020px;
     margin: 0 auto;
@@ -40,21 +45,25 @@
 
   &__name {
     font-size: m.div(18, 16) + rem;
+
     @include tablet {
       margin: 0 $space-80 $space-24;
       font-size: m.div(24, 16) + rem;
     }
   }
+
   &__bio {
     @include tablet {
       display: flex;
       margin: 0 $space-80 $space-32;
     }
   }
+
   &__bio-text {
     font-size: m.div(16, 16) + rem;
     line-height: 1.8;
     margin-bottom: $space-16;
+
     @include tablet {
       font-size: m.div(16, 16) + rem;
       padding-right: $space-24;
@@ -66,15 +75,18 @@
   font-size: m.div(18, 16) + rem;
   font-weight: 600;
   line-height: 1.5;
+
   @include tablet {
     margin: 0 $space-80 $space-64;
     font-size: m.div(24, 16) + rem;
   }
+
   &__text {
     font-weight: inherit;
     font-size: inherit;
     line-height: inherit;
   }
+
   &__caption {
     margin-top: $space-8;
   }
@@ -85,48 +97,60 @@
 .gallery {
   background-color: $alabaster;
   padding: $space-24 $space-16;
+
   &__wrapper {
     @include tablet {
       padding: $space-32 0;
     }
+
     @include desktop {
       width: 1020px;
       margin: 0 auto;
     }
   }
+
   &__title {
     padding: $space-24 $space-4 $space-24;
+
     @include tablet {
       padding: $space-36 $space-32 $space-16;
     }
+
     @include desktop {
       padding: $space-36 0;
     }
   }
+
   &__photos {
     display: flex;
     flex-wrap: wrap;
+
     @include tablet {
       margin: 0 $space-24;
       justify-content: space-between;
     }
+
     @include desktop {
       margin: 0;
     }
   }
+
   &__photo {
     filter: grayscale(1);
     margin-bottom: $space-16;
     width: 100%;
     transition: filter 0.3s ease-in-out;
+
     @include tablet {
       display: inline-block;
       margin: $space-16;
       width: calc(100% / 3 - 1rem * 2);
     }
+
     @include desktop {
       margin: $space-24 0;
     }
+
     &:hover {
       filter: grayscale(0);
     }
@@ -134,18 +158,22 @@
 }
 
 /* Comments section */
+
 .comment {
   &__wrapper {
     display: flex;
     margin: 0 $space-16;
     padding-bottom: $space-16;
+
     @include tablet {
       margin: 0 12%;
     }
+
     @include desktop {
       margin: 0 25%;
     }
   }
+
   &:last-of-type {
     margin-bottom: $space-48;
   }
@@ -154,16 +182,20 @@
 .comment-form {
   &__title {
     margin-inline: $space-16;
+
     @include tablet {
       margin-inline: $space-32;
     }
+
     @include desktop {
       margin-inline: 0;
     }
   }
+
   &__name {
     margin: 0;
   }
+
   &__avatar {
     flex-shrink: 0;
     background-image: url("../assets/images/Mohan-muruge.jpg");
@@ -175,15 +207,18 @@
     margin-right: $space-16;
     background-size: cover;
   }
+
   &__form {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
+
   &__label {
     color: $silver;
     margin-bottom: 4px;
   }
+
   &__input {
     display: block;
     width: 100%;
@@ -192,14 +227,17 @@
     padding: m.div(12, 16) + rem;
     margin-bottom: $space-24;
     background-color: $alabaster;
+
     @include tablet {
       padding: 1rem;
     }
+
     &:focus,
     &:active {
       border: 1px solid transparent;
       outline: 1px solid $bandsite-black;
     }
+
     &--error,
     &--error:active,
     &--error:focus {
@@ -218,43 +256,51 @@
 
 .comment {
   padding-top: $space-24;
+
   @include desktop {
     width: 1020px;
     margin: 0 auto;
   }
+
   &__avatar {
     flex-shrink: 0;
     background-color: $mercury;
     width: $space-48;
     height: $space-48;
     border-radius: 50%;
-
     margin-right: $space-16;
     background-size: cover;
   }
+
   &__content {
     width: 100%;
   }
+
   &__header {
     display: flex;
     justify-content: space-between;
     margin-bottom: $space-4;
   }
+
   &__name {
     color: $bandsite-darkblack;
   }
+
   &__date {
     color: $silver;
   }
+
   &__text {
     color: $bandsite-black;
     line-height: 1.5;
   }
+
   &__actions {
     display: flex;
     flex-direction: row-reverse;
     margin-top: $space-8;
   }
+
   &__delete {
     margin-left: $space-8;
     display: flex;
@@ -264,10 +310,12 @@
     color: $alabaster;
     border-radius: 5px;
     cursor: pointer;
+
     &:hover {
       background-color: rgb(231, 90, 90);
     }
   }
+
   &__delete-icon {
     margin-right: $space-4;
   }
@@ -278,6 +326,7 @@
 .like {
   display: inline-flex;
   align-items: center;
+
   &__count {
     display: inline-block;
     min-width: 1.5rem;
@@ -285,6 +334,7 @@
     font-weight: bold;
     margin-right: $space-4;
   }
+
   &__button {
     cursor: pointer;
     border-radius: 5px;
@@ -294,6 +344,7 @@
     display: inline-flex;
     align-items: baseline;
     border: 0;
+
     &:hover {
       background-color: rgba(rgb(212, 113, 241), 0.6);
 
@@ -302,6 +353,7 @@
       }
     }
   }
+
   &__icon {
     margin-left: $space-4;
     display: inline-block;
